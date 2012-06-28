@@ -27,14 +27,14 @@ var ModalView =
 			closeImageHoverUrl: "close-modal-hover.png",
             css:
             {
-                "border": "2px solid #111",
-			    "background-color": "#fff",
-			    "-webkit-box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
-			    "-moz-box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
-			    "box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
-                "-webkit-border-radius": "10px",
-                "-moz-border-radius": "10px",
-                "border-radius": "10px"
+                // "border": "2px solid #111",
+			    // "background-color": "#fff",
+			    // "-webkit-box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
+			    // "-moz-box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
+			    // "box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
+       //          "-webkit-border-radius": "10px",
+       //          "-moz-border-radius": "10px",
+       //          "border-radius": "10px"
             }
 		},
 
@@ -255,23 +255,24 @@ var ModalView =
                     var image =
                         $("<a href='#' id='modalCloseButton'>&#160;</a>")
                             .css({
-									"position":"absolute",
-									"top":"-10px",
-									"right":"-10px",
-									"width":"32px",
-									"height":"32px",
-									"background":"transparent url(" + view.options.closeImageUrl + ") top left no-repeat",
-									"text-decoration":"none"})
-                            .appendTo( this.modalContainer)
-                            .hover(
-                                function()
-                                {
-                                    $(this).css( "background-image", "url(" + view.options.closeImageHoverUrl + ") !important");
-                                },
-                                function()
-                                {
-                                    $(this).css( "background-image", "url(" + view.options.closeImageUrl + ") !important");
+									// "position":"absolute",
+									// "top":"-10px",
+									// "right":"-10px",
+									// "width":"32px",
+									// "height":"32px",
+									// "background":"transparent url(" + view.options.closeImageUrl + ") top left no-repeat",
+									// "text-decoration":"none"
                                 })
+                            .appendTo( this.modalContainer)
+                            // .hover(
+                            //     function()
+                            //     {
+                            //         $(this).css( "background-image", "url(" + view.options.closeImageHoverUrl + ") !important");
+                            //     },
+                            //     function()
+                            //     {
+                            //         $(this).css( "background-image", "url(" + view.options.closeImageUrl + ") !important");
+                            //     })
                             .click(
                                 function( event)
                                 {

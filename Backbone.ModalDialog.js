@@ -13,30 +13,30 @@ var ModalView =
         modalBlanket: null,
         modalContainer: null,
         defaultOptions:
-		{
-			fadeInDuration:150,
-			fadeOutDuration:150,
-			showCloseButton:true,
-			bodyOverflowHidden:false,
+        {
+            fadeInDuration:150,
+            fadeOutDuration:150,
+            showCloseButton:true,
+            bodyOverflowHidden:false,
             setFocusOnFirstFormControl:true,
             targetContainer: document.body,
             slideFromAbove: false,
             slideFromBelow: false,
             slideDistance: 150,
-			closeImageUrl: "close-modal.png",
-			closeImageHoverUrl: "close-modal-hover.png",
+            closeImageUrl: "close-modal.png",
+            closeImageHoverUrl: "close-modal-hover.png",
             css:
             {
                 // "border": "2px solid #111",
-			    // "background-color": "#fff",
-			    // "-webkit-box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
-			    // "-moz-box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
-			    // "box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
-       //          "-webkit-border-radius": "10px",
-       //          "-moz-border-radius": "10px",
-       //          "border-radius": "10px"
+                // "background-color": "#fff",
+                // "-webkit-box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
+                // "-moz-box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
+                // "box-shadow": "0px 0px 15px 4px rgba(0, 0, 0, 0.5)",
+                // "-webkit-border-radius": "10px",
+                // "-moz-border-radius": "10px",
+                // "border-radius": "10px"
             }
-		},
+        },
 
         initialize:
             function()
@@ -187,11 +187,11 @@ var ModalView =
                 //Set the center alignment padding + border see css style
                 var $el = $(this.el);
 
-				var centreY = $(window).height() / 2;
+                var centreY = $(window).height() / 2;
                 var centreX = $(window).width() / 2;
                 var modalContainer = this.ensureModalContainer( this.options.targetContainer).empty();
-		
-		        $el.addClass( "modal");
+        
+                $el.addClass( "modal");
 
                 var coords = {
                     top: this.getCoordinate( "top", this.options.css),
@@ -201,7 +201,7 @@ var ModalView =
                     isEmpty: function(){return (this.top == null && this.left == null && this.right == null && this.bottom == null);}
                     };
 
-				$el.css( this.options.css);
+                $el.css( this.options.css);
 
                 this.showModalBlanket();
                 this.keyup = _.bind( this.keyup, this);
@@ -227,12 +227,12 @@ var ModalView =
                 if( coords.isEmpty())
                 {
                     var positionY = centreY  - ($el.outerHeight() / 2);
-					// Overriding the coordinates with explicit values if they are passed in
+                    // Overriding the coordinates with explicit values if they are passed in
                     if( typeof( this.options.y) !== "undefined"){positionY = this.options.y;}
                     modalContainer.css({"top": positionY + "px"});
 
                     var positionX = centreX - ($el.outerWidth() / 2);
-					// Overriding the coordinates with explicit values if they are passed in
+                    // Overriding the coordinates with explicit values if they are passed in
                     if( typeof( this.options.x) !== "undefined"){ positionX = this.options.x;}
                     modalContainer.css({"left": positionX + "px"});
                 }
@@ -255,13 +255,13 @@ var ModalView =
                     var image =
                         $("<a href='#' id='modalCloseButton'>&#160;</a>")
                             .css({
-									// "position":"absolute",
-									// "top":"-10px",
-									// "right":"-10px",
-									// "width":"32px",
-									// "height":"32px",
-									// "background":"transparent url(" + view.options.closeImageUrl + ") top left no-repeat",
-									// "text-decoration":"none"
+                                    // "position":"absolute",
+                                    // "top":"-10px",
+                                    // "right":"-10px",
+                                    // "width":"32px",
+                                    // "height":"32px",
+                                    // "background":"transparent url(" + view.options.closeImageUrl + ") top left no-repeat",
+                                    // "text-decoration":"none"
                                 })
                             .appendTo( this.modalContainer)
                             // .hover(

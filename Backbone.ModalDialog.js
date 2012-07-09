@@ -76,7 +76,7 @@ var ModalView =
                     this.modalContainer =
                         $("<div id='modalContainer'>")
                             .css({
-                                "z-index":"99999",
+                                "z-index":"99",
                                 "position":"relative",
                                 "-webkit-border-radius": "6px",
                                 "-moz-border-radius": "6px",
@@ -106,7 +106,7 @@ var ModalView =
                                     width: "100%", // ...and full width
                                     opacity: 0.5, // Make it slightly transparent
                                     backgroundColor: "#000",
-                                    "z-index": 99900
+                                    "z-index": 90
                                 })
                             .appendTo( document.body)
                             .hide();
@@ -221,7 +221,7 @@ var ModalView =
                 modalContainer.css({
                         "opacity": 0,
                         "position": "absolute",
-                        "z-index": 999999});
+                        "z-index": 99});
 
                 // Only apply default centre coordinates if no css positions have been supplied
                 if( coords.isEmpty())

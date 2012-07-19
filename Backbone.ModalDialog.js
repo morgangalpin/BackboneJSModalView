@@ -100,7 +100,7 @@ var ModalView =
                             .css(
                                 {
                                     position: "absolute",
-                                    top: $(document).scrollTop(), // Use document scrollTop so it's on-screen even if the window is scrolled
+                                    top: 0,
                                     left: 0,
                                     height: $(document).height(), // Span the full document height...
                                     width: "100%", // ...and full width
